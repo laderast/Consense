@@ -1,0 +1,103 @@
+<html><head><title>Jaccard Index</title>
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>jaccard(Consense)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   jaccard">
+<param name="keyword" value=" Jaccard Index">
+</object>
+
+
+<h2>Jaccard Index</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Given two clusterings C and C', this function calculates 
+the Jaccard Index between the two clusterings.  The jaccard index
+compares the two clusterings by counting and comparing pairs of elements
+across the two clusterings.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>jaccard(clustering1, clustering2)</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>clustering1</code></td>
+<td>
+A clustering as defined by the cluster 
+output functions of this package.  See ?outputcluster() 
+for more details.</td></tr>
+<tr valign="top"><td><code>clustering2</code></td>
+<td>
+same as clustering 1.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+Given two clusterings C and C', the Jaccard Index will compare 
+the elements in common between them.  This is done by generating an 
+contingency table, whose Nij entry correpsonds to how many elements 
+in common cluster Ci has in common with cluster C'j.
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>jaccard index</code></td>
+<td>
+Jaccard index comparing clustering 1 and 2. A 
+value that ranges from 0-1.  The more the clusterings are in
+agreement, the closer the Jaccard index will be to 1.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Ted Laderas (laderast@ohsu.edu)
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Dudoit, S. and Fridlyand, J. A prediction-based resampling method for
+estimating the number of clusters in a dataset. <EM>Genome Biology.</EM> 
+2002. 3: p. RESEARCH036.
+</p>
+<p>
+Jain, A.K. and Dubes R.C. <EM>Algorithms for Clustering Data.</EM> 
+Englewood Cliffs, NJ: Prentice Hall. 1988.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="variationInformation.html">variationInformation</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  data(choresults)
+  clusts &lt;- choresults$clusters
+  jaccard(as.data.frame(clusts[[c("UPGMACOR")]]), 
+    as.data.frame(clusts[[c("UPGMAEUC")]]))
+  </pre>
+
+
+
+<hr><div align="center">[Package <em>Consense</em> version 0.1.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

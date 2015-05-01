@@ -1,0 +1,83 @@
+<html><head><title>Cluster Center function</title>
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>clusterCenters(Consense)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   clusterCenters">
+<param name="keyword" value=" Cluster Center function">
+</object>
+
+
+<h2>Cluster Center function</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Given a matrix of data with its cluster assignments,
+return a matrix of the cluster centers.  Note that 
+several euclidean-based methods will return cluster
+centers.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>clusterCenters(x)</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+a data frame whose first column consists of
+cluster assignments. Note these cluster assignments
+must be in the form of integers.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>centers</code></td>
+<td>
+A matrix whose rows correspond to the vector
+mean (the cluster center) of all the elements in a 
+particular cluster. For example, centers[1,] contains the 
+vector mean for all the elements with cluster assignment 1. 
+<br>
+Note that if there are no elements in a cluster (as in the
+case of SOM with an unused map), that row will have NAs.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Ted Laderas (laderast@ohsu.edu)
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  ## = don't run
+  ##clusterassign is a vector of cluster assignments
+  ##such as the output from kmeans
+  ##data is matrix of actual data
+
+  #example of use using k-means
+  x &lt;- rbind(matrix(rnorm(100, sd = 0.3), ncol = 2),
+           matrix(rnorm(100, mean = 1, sd = 0.3), ncol = 2))
+  cl &lt;- kmeans(x, 2, 20)
+  clusterassign &lt;- cl$cluster
+
+  clustmatrix &lt;- cbind(clusterassign, x)
+  centers &lt;- clusterCenters(as.data.frame(clustmatrix))
+  </pre>
+
+
+
+<hr><div align="center">[Package <em>Consense</em> version 0.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

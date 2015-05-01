@@ -1,0 +1,97 @@
+<html><head><title>Index Gene</title>
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>IndexGene(Consense)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   IndexGene">
+<param name="keyword" value=" Index Gene">
+</object>
+
+
+<h2>Index Gene</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Find all the genes that cluster with an index gene of interest.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>IndexGene(clusterresults, indexgene)</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>clusterresults</code></td>
+<td>
+A set of clustering results produced by the use of
+<code><a href="autoCompareClustering.html">autoCompareClustering</a></code> or <code><a href="CompareClustering.html">CompareClustering</a></code>.</td></tr>
+<tr valign="top"><td><code>indexgene</code></td>
+<td>
+Gene Identifier for gene of interest.  Note that             
+this identifier must exist as a gene name in the result set. 
+If not, the function will return an error.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This function works on a result set as output by 
+<code>autoCompareClustering</code> or <code>CompareClustering</code>.
+Index genes can be any gene that is of interest to the user.
+This function allows users to cut across methods and see
+where they agree, leveraging the power of several clustering
+methods at once.  This can be of interest when attempting
+to infer function of an unknown gene based on its membership
+of a cluster.
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>rankedmatrix</code></td>
+<td>
+A matrix of genes sorted by frequency (i.e.,              
+the number of clustering methods in which that gene clustered
+with the index gene).  Rows correspond to the genes. The
+first column gives the frequency, the next columns show the
+"votes" of each method (i.e., whether the gene clustered
+with the index gene in that method or not).</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Ted Laderas (laderast@ohsu.edu)
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="ClusterReport.html">ClusterReport</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  ##Load Cho data result set
+  data(choresults)
+  ##MYO1 == YHRO23w
+  gene.list &lt;- IndexGene(choresults, "YHR023w")
+  ##show index gene list
+  gene.list
+</pre>
+
+
+
+<hr><div align="center">[Package <em>Consense</em> version 0.1.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

@@ -1,0 +1,86 @@
+<html><head><title>Between-Method Metrics</title>
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>betweenmetrics(Consense)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   betweenmetrics">
+<param name="keyword" value=" Between-Method Metrics">
+</object>
+
+
+<h2>Between-Method Metrics</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Given a list of clusterings, calculates the between
+method metrics between them.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>betweenmetrics(clusterlist)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>clusterlist</code></td>
+<td>
+a list of lists which contains clusterings 
+and parameters as supplied by <code>clusterList</code>.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+Calculates the between-method metrics between all
+clusterings as supplied by <code>clusterlist</code>.
+</p>
+
+
+<h3>Value</h3>
+
+<p>
+A list of the following matrices:
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>jaccardresult</code></td>
+<td>
+a matrix that contains all possible 
+comparisons between clusterings using the jaccard index.
+currently this is formatted much like a distance matrix,
+with the columns corresponding to the first 1:n-1 methods
+and the rows corresponding to the 2:n methods.</td></tr>
+<tr valign="top"><td><code>variationresult</code></td>
+<td>
+a matrix that contains all possible
+comparison between clusterings using the variation of
+information.  Similarly formatted to the matrix for
+jaccardresult.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Ted Laderas (laderast@ohsu.edu)
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="clusterList.html">clusterList</a></code>
+<code><a href="variationInformation.html">variationInformation</a></code>
+<code><a href="jaccard.html">jaccard</a></code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>Consense</em> version 0.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

@@ -1,0 +1,85 @@
+<html><head><title>Within-Method Metrics</title>
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>withinmetrics(Consense)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   withinmetrics">
+<param name="keyword" value=" Within-Method Metrics">
+</object>
+
+
+<h2>Within-Method Metrics</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Framework for calculating the within-method metrics
+for a list of methods.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>withinmetrics(clusterlist, data)</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>clusterlist</code></td>
+<td>
+a list of lists which contains clusterings 
+and parameters as supplied by clusterList().</td></tr>
+<tr valign="top"><td><code>data</code></td>
+<td>
+A matrix of expression values.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+Given a list of parameters and clusterings as supplied 
+by clusterList, calculates and returns a matrix with all of the
+relevant within-method clustering metrics.
+</p>
+<p>
+Currently, withinresult calculates number of clusters, 
+homogeneity, separation and average silhouette width.  Note 
+that this average silhouette width is correlation-based.  See
+silhouette() in the cluster package for more information.
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>withinresult</code></td>
+<td>
+a matrix whose columns correspond to the
+metrics calculated and whose rows correspond to the methods
+these methods were calculated on.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Ted Laderas (laderast@ohsu.edu)
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="clusterList.html">clusterList</a></code>
+<code><a href="homogeneity.html">homogeneity</a></code>
+<code><a href="separation.html">separation</a></code>
+<code>silhouette</code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>Consense</em> version 0.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

@@ -1,0 +1,115 @@
+<html><head><title>Variation of Information</title>
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>variationInformation(Consense)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   variationInformation">
+<param name="keyword" value=" Variation of Information">
+</object>
+
+
+<h2>Variation of Information</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Given two clusterings, this function calculates 
+the Variation of Information between them.  Variation of 
+Information can be thought of as what information content 
+is lost and what information content is gained by choosing 
+one clustering over the other clustering.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>variationInformation(clustering1, clustering2)</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>clustering1</code></td>
+<td>
+A clustering as defined by the cluster 
+output functions of this package.  See <code>outputcluster</code> 
+for more details.</td></tr>
+<tr valign="top"><td><code>clustering2</code></td>
+<td>
+same as clustering 1.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+The Variation of Information (from Meila) is a quantity 
+based on the entropy H(C) of a clustering C, the entropy
+H(C') of the second clustering C', and the mutual 
+information I(C,C') between these two clusterings.  See 
+Meila for more information on how entropy and mutual
+information are calculated.  
+</p>
+<p>
+Variation of Information can be thought of as what
+information content is lost and what information content
+is gained by choosing one clustering over the other
+clustering.  Unlike more conventional methods of counting
+cluster membership (such as Jaccard Index), the value can 
+be interpreted when there are different numbers of clusters 
+in the two clusterings. 
+</p>
+<p>
+The Variation of information is calculated by the following
+equation: <i>H(C) + H(C') - 2I(C, C')</i>
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>variation</code></td>
+<td>
+Variation of Information. A value that ranges
+from 0-1.  The more the clusterings are in agreement, the
+closer this value is to 0.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Ted Laderas (laderast@ohsu.edu)
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Meila, M. Comparing Clusterings. Technical Report 418. 2002,
+University of Washington Statistics Department: Seattle.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="jaccard.html">jaccard</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+    data(choresults)
+    clusts &lt;- choresults$clusters
+    #calculate Variation of Information from clusterings
+    variationInformation(as.data.frame(clusts[[c("UPGMACOR")]]), 
+    as.data.frame(clusts[[c("UPGMAEUC")]]))
+    </pre>
+
+
+
+<hr><div align="center">[Package <em>Consense</em> version 0.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

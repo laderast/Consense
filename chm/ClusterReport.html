@@ -1,0 +1,111 @@
+<html><head><title>Cluster Report</title>
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>ClusterReport(Consense)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   ClusterReport">
+<param name="keyword" value=" Cluster Report">
+</object>
+
+
+<h2>Cluster Report</h2>
+
+
+<h3>Description</h3>
+
+<p>
+After the result set has been returned by
+CompareClustering, generates all tables and relevant 
+figures for that result set.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+ClusterReport(clusterresults, write=FALSE, filebase)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>clusterresults</code></td>
+<td>
+A result set from CompareClustering. </td></tr>
+<tr valign="top"><td><code>write</code></td>
+<td>
+</td></tr>
+<tr valign="top"><td><code>filebase</code></td>
+<td>
+A base file name.  Files will be saved in the 
+current directory.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+The within metrics are displayed as a table and the cluster
+results are saved as a graph.
+<br>
+Files are saved in the current working directory.
+Currently the following files are saved:
+</p>
+<table summary="R argblock">
+<tr valign="top"><td><code>filebase within.txt</code></td>
+<td>
+A tab delimited text file of
+the various metrics, as described in withinmetrics().</td></tr>
+<tr valign="top"><td><code>filebase clusters.txt</code></td>
+<td>
+A tab-delimted text file of
+all clusterings by assignment.</td></tr>
+<tr valign="top"><td><code>filebase jaccard.jpg</code></td>
+<td>
+A Jpeg of the metaclustering
+dendrogram for the Jaccard Metric, comparing all methods.  
+Note that the clustering is actually done on (1-Jaccard).</td></tr>
+<tr valign="top"><td><code>filebase jaccard.txt</code></td>
+<td>
+A text file of the actual Jaccard 
+metrics in tab-delimited format.</td></tr>
+<tr valign="top"><td><code>filebase variation.jpg</code></td>
+<td>
+A Jpeg of the metaclustering
+dendrogram for the Variation of Information metric,
+comparing all methods.</td></tr>
+<tr valign="top"><td><code>filebase variation.txt</code></td>
+<td>
+A text file of the actual 
+Variation metrics in tab-delimited format.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Ted Laderas (laderast@ohsu.edu)
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="withinmetrics.html">withinmetrics</a></code>, <code><a href="betweenmetrics.html">betweenmetrics</a></code>,
+<code><a href="CompareClustering.html">CompareClustering</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+    data(choresults)
+    #display results and save files to current working directory
+    ClusterReport(choresults, write=TRUE, filebase="choresults")
+</pre>
+
+
+
+<hr><div align="center">[Package <em>Consense</em> version 0.1.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

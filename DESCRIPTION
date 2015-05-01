@@ -1,0 +1,12 @@
+Package: Consense
+Date: 2010-11-28
+Title: Consense: a package for evaluating multiple clusterings
+Version: 0.1.4
+Author: Ted Laderas <laderast@ohsu.edu>, with
+ contributions from Shannon McWeeney <mcweeney@ohsu.edu>.
+Maintainer: Ted Laderas <laderast@ohsu.edu>
+Depends: R (>= 2.10.0), Biobase, cluster
+Suggests: som
+Description: The large variety of clustering algorithms can be daunting to those wishing to explore patterns within their microarray datasets.  Furthermore, each clustering algorithm has distinct biases in finding patterns within the data, and clusterings may not be reproducible across two different algorithms.  A consensus approach utilizing multiple algorithms could potentially show where the various algorithms agree and expose robust patterns within the data. In this paper, we present a software package, Consense, written for R/Bioconductor that utilizes such a consensus approach to explore datasets. Consense produces clustering results for each of the clustering methods and produces a report of metrics comparing the individual clusterings.  A further post-processing step that may be useful to biologists is exploring those clusters of genes that contain an index gene of interest. 
+License: GPL version 2 or newer
+URL: http://www.r-project.org, http://nhlbi.ohsu.edu/consense/

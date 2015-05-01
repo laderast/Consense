@@ -1,0 +1,98 @@
+<html><head><title>Compare Clusterings Automatically</title>
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>autoCompareClustering(Consense)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   autoCompareClustering">
+<param name="keyword" value=" Compare Clusterings Automatically">
+</object>
+
+
+<h2>Compare Clusterings Automatically</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Given a number of clusters k as input,
+cluster a dataset using multiple methods.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>autoCompareClustering(data, kinput)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>data</code></td>
+<td>
+A matrix of values to cluster by row.  To cluster
+by column, simply transpose the matrix.  However, note that
+the row names must be unique, as the framework uses the
+row names in calculating the between-method metrics.</td></tr>
+<tr valign="top"><td><code>kinput</code></td>
+<td>
+A desired geometry (number of clusters) k, greater 
+than 1 and less than n (number of genes or samples).</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+This is a wrapper function for <code><a href="CompareClustering.html">CompareClustering</a></code> 
+that has suitable defaults for automatically clustering and producing
+results for a given k (number of clusters).  In the case of
+hierarchical methods, the dendrograms will be pruned at a height 
+that yields that number of clusters.
+</p>
+<p>
+Note that for SOM, we are essentially limiting it to a one dimensional
+map (k x 1). If two dimensional maps are required, 
+<code><a href="CompareClustering.html">CompareClustering</a></code> is a more appropriate function.
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>resultset</code></td>
+<td>
+A result set that can be read by 
+<code><a href="ClusterReport.html">ClusterReport</a></code> or <code>\line{IndexGene}</code>.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Ted Laderas (laderast@ohsu.edu)
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code>link{CompareClusterings}</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  ##load data
+  data(chocellcycle)
+  ##look for 5 clusters
+  resultset &lt;- autoCompareClustering(chocellcycle, kinput=5)
+  ##examine results
+  ClusterReport(resultset, "test")
+</pre>
+
+
+
+<hr><div align="center">[Package <em>Consense</em> version 0.1.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

@@ -1,0 +1,84 @@
+<html><head><title>Average Separation of a clustering.</title>
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>separation(Consense)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   separation">
+<param name="keyword" value=" Average Separation of a clustering.">
+</object>
+
+
+<h2>Average Separation of a clustering.</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Given cluster output from a suitable clustering function,
+calculate the separation (from Shamir, et al.) of the
+clusterings. Homogeneity can be thought of as a measure of the
+average between-cluster distance within a clustering.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>separation(clustering, centers)</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>clustering</code></td>
+<td>
+Cluster output from a clustering function.
+the output should be in matrix format with the cluster assignments being 
+the first column in that matrix, with the actual data in remaining 
+columns.</td></tr>
+<tr valign="top"><td><code>centers</code></td>
+<td>
+Cluster centers from <code><a href="clusterCenters.html">clusterCenters</a></code>.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>separation</code></td>
+<td>
+An unbounded, non-negative scalar that represents
+the separation of the clustering.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Ted Laderas (laderast@ohsu.edu)
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Shamir, et al. Algorithmic Approaches to Clustering Gene Expression
+Data. in <EM>Current Topics in Computational Molecular Biology</EM>.
+MIT Press: Boston.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>##=don't run
+    ##calculate separation for Cho et al's clusters
+    data(chocellcycle)
+    data(choclusters)
+    cho &lt;- cbind(as.numeric(choclusters), chocellcycle)
+    cent &lt;- clusterCenters(as.data.frame(cho))
+    separation(cho, cent)
+  </pre>
+
+
+
+<hr><div align="center">[Package <em>Consense</em> version 0.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

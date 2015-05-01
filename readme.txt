@@ -1,0 +1,1 @@
+This is the R source code for the current distribution of Consense.  This directory is buildable into an R package on both Unix and Windows boxes.

@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HEAD></HEAD><HTML><BODY>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Package Consense:  Contents">
+<param name="Local" value="00Index.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Package Consense:  R objects">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="agglomOutput">
+<param name="Local" value="clusterOutput.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="autoCompareClustering">
+<param name="Local" value="autoCompareClustering.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="betweenmetrics">
+<param name="Local" value="betweenmetrics.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="chocellcycle">
+<param name="Local" value="chocellcycle.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="choclusters">
+<param name="Local" value="choclusters.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="choresults">
+<param name="Local" value="choresults.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="clusterCenters">
+<param name="Local" value="clusterCenters.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="clusterList">
+<param name="Local" value="clusterList.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="ClusterReport">
+<param name="Local" value="ClusterReport.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="CompareClustering">
+<param name="Local" value="CompareClustering.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="countcluster">
+<param name="Local" value="countcluster.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="dianaOutput">
+<param name="Local" value="clusterOutput.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="getClusterInfo">
+<param name="Local" value="getClusterInfo.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="homogeneity">
+<param name="Local" value="homogeneity.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="IndexGene">
+<param name="Local" value="IndexGene.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="inspectTree">
+<param name="Local" value="inspectTree.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="jaccard">
+<param name="Local" value="jaccard.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="kmeansOutput">
+<param name="Local" value="clusterOutput.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="methodlistAuto">
+<param name="Local" value="methodlistAuto.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="separation">
+<param name="Local" value="separation.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="somOutput">
+<param name="Local" value="clusterOutput.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="variationInformation">
+<param name="Local" value="variationInformation.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="withinmetrics">
+<param name="Local" value="withinmetrics.html">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Package Consense:  Titles">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Average Separation of a clustering.">
+<param name="Local" value="separation.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Between-Method Metrics">
+<param name="Local" value="betweenmetrics.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Calculates the homogeneity of a clustering.">
+<param name="Local" value="homogeneity.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Cho Yeast Cell Cycle Dataset">
+<param name="Local" value="chocellcycle.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Cluster Center function">
+<param name="Local" value="clusterCenters.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Cluster List">
+<param name="Local" value="clusterList.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Cluster Report ">
+<param name="Local" value="ClusterReport.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Clustering Output functions">
+<param name="Local" value="clusterOutput.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Compare Clusterings">
+<param name="Local" value="CompareClustering.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Compare Clusterings Automatically">
+<param name="Local" value="autoCompareClustering.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Consense Result Set for Cho Cell Cycle">
+<param name="Local" value="choresults.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Get Clustering Info ">
+<param name="Local" value="getClusterInfo.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Index Gene">
+<param name="Local" value="IndexGene.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Inspect Dendrograms">
+<param name="Local" value="inspectTree.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Jaccard Index">
+<param name="Local" value="jaccard.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="methodlistAuto">
+<param name="Local" value="methodlistAuto.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Original Cho Cell Cycle Cluster Assignments">
+<param name="Local" value="choclusters.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="produce a vector of cluster counts of each  cluster">
+<param name="Local" value="countcluster.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Variation of Information">
+<param name="Local" value="variationInformation.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+<param name="Name" value="Within-Method Metrics">
+<param name="Local" value="withinmetrics.html">
+</OBJECT>
+</UL>
+</UL>
+</BODY></HTML>

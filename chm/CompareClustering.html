@@ -1,0 +1,112 @@
+<html><head><title>Compare Clusterings</title>
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>CompareClustering(Consense)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   CompareClustering">
+<param name="keyword" value=" Compare Clusterings">
+</object>
+
+
+<h2>Compare Clusterings</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Main framework for comparing clustering functions.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+CompareClustering(data, verbose = TRUE, auto = FALSE, kinput)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>data</code></td>
+<td>
+A matrix of values to cluster by row.  To cluster
+by column, simply transpose the matrix.  However, note that
+the row names must be unique, as the framework uses the
+row names in calculating the between-method metrics. </td></tr>
+<tr valign="top"><td><code>verbose</code></td>
+<td>
+If TRUE, show progress of execution.  If not,
+run without showing progress of execution. </td></tr>
+<tr valign="top"><td><code>auto</code></td>
+<td>
+If FALSE, run getClusterInfo to query user
+as to parameters.  If TRUE, use kinput as number of clusters
+for methodlistAuto </td></tr>
+<tr valign="top"><td><code>kinput</code></td>
+<td>
+For automated clustering, a value for k (number
+of clusters) to be input to the clustering methods.  If
+left blank or has a character value, the default mode is 
+to allow users to hand cut their clusters using 
+<code><a href="inspectTree.html">inspectTree</a></code>.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>report</code></td>
+<td>
+A list containing the metrics. report$within
+contains a matrix of all the within-method metrics
+calculated.  report$between contains the two matrices
+comparing all methods: between$jaccardresult 
+contains the Jaccard Indices, and between$variationresult
+contains all Variation of information metrics.</td></tr>
+<tr valign="top"><td><code>params</code></td>
+<td>
+A list of lists containing all parameters 
+input to the clustering methods. Note that many of these         
+parameters are unique to the clustering method. params[[i]]
+contains a list of parameters for method i. (Example:
+params[[i]]$id will give the identifier for the method 
+used to label the output by the ClusterReport.)</td></tr>
+<tr valign="top"><td><code>clusters</code></td>
+<td>
+A list of lists. clusters[[i]] contains a
+vector corresponding to the cluster assignments for the
+method specified in params[[i]].</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Ted Laderas (laderast@ohsu.edu)
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="clusterReport.html">ClusterReport</a></code>, <code><a href="clusterList.html">clusterList</a></code>,
+<code><a href="methodlistAuto.html">methodlistAuto</a></code>, <code><a href="getClusterInfo.html">getClusterInfo</a></code>,
+<code><a href="autoCompareClustering.html">autoCompareClustering</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  data(chocellcycle)
+    ##run with input geometry of 5 and verbose output
+    results &lt;- CompareClustering(chocellcycle, verbose=TRUE, auto = TRUE, kinput=5)
+    ##display results
+    ClusterReport(results)
+</pre>
+
+
+
+<hr><div align="center">[Package <em>Consense</em> version 0.1.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>

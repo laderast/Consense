@@ -1,0 +1,84 @@
+<html><head><title>Clustering Output functions</title>
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>kmeansOutput(Consense)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   kmeansOutput">
+<param name="keyword" value="R:   dianaOutput">
+<param name="keyword" value="R:   agglomOutput">
+<param name="keyword" value="R:   somOutput">
+<param name="keyword" value=" Clustering Output functions">
+</object>
+
+
+<h2>Clustering Output functions</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Wrapper functions for clustering methods that pass on
+appropriate parameters and produce standardized output for
+<code><a href="betweenmetrics.html">betweenmetrics</a></code> and <code><a href="withinmetrics.html">withinmetrics</a></code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+  kmeansOutput(matrix, params)
+  dianaOutput(matrix, params)
+  agglomOutput(matrix, params)
+  somOutput(matrix, params)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>matrix</code></td>
+<td>
+A matrix of expression values.  Commonly, this corresponds
+to the columns corresponding to samples and the rows corresponding
+to genes. </td></tr>
+<tr valign="top"><td><code>params</code></td>
+<td>
+A list of params supplied to the function.</td></tr>
+</table>
+
+<h3>Details</h3>
+
+<p>
+In order to add a clustering method, you must add a wrapper function
+that implements the interface clusterOutput(data, params).  Params can be 
+passed onto the function by rewriting methodlistAuto (the easy way) or
+by producing a necessary param list by adding code to getClusterInfo
+(the more difficult way).  The wrapper function must translate 
+the output format of the clustering method into the clustering output 
+format described above.
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>clustering</code></td>
+<td>
+A data frame with only one cluster whose row values are
+factors that correspond to the cluster that gene belongs to.  Note
+that these must be factors; otherwise the clustering cannot be utilized
+by the rest of the Consense package</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Ted Laderas (laderast@ohsu.edu
+</p>
+
+
+
+<hr><div align="center">[Package <em>Consense</em> version 0.1 <a href="00Index.html">Index]</a></div>
+
+</body></html>
