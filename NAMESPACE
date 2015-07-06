@@ -1,0 +1,2 @@
+export(ClusterReport, CompareClustering, IndexGene, jaccard, variationInformation)
+export(autoCompareClustering, separation, getClusterInfo)
